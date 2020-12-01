@@ -1,0 +1,65 @@
+/* initial setup */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    color:black;
+    font-family:'vag';
+}
+img{
+    width:100%;
+}
+/* font */
+@font-face {
+    font-family: 'vag';
+    src: url('/assets/vag.otf');
+}
+/* menu grid */
+.menu{
+display: grid;
+width: 100%;
+padding:1em;
+grid-gap:1em;
+
+
+
+
+}
+/* menu items styling */
+.menuItem{
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    border: 0.2em solid black;
+    border-radius:1em ;
+    padding: 0.5em;
+
+}
+.navPen{
+    width: 100%;
+padding: 0.5em;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.drawingMiniature{
+    width:100%;
+}
+
+/* profile */
+
+.profilePicture{
+    width: 50%;
+    margin: auto;
+    padding: 2em;
+    display: grid;
+}
