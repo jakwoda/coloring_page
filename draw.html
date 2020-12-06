@@ -7,12 +7,31 @@
     <link rel="shortcut icon" 
     type="image/x-icon" 
     href="/assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
 </head>
 <body>
 
-    <a href="index.html"><h1 style="text-align: center;margin-top: 50%; font-size: 5em; font-family: vag;">draw</h1></a> 
+    <div class="menu drawing-template">
+    <a href="index.html"><img class="navPen" src="/assets//images/pencil.png" alt=""></a>
+</div>
+    <div class="rastabook">
+        
+    </div>
+    <div class="menu colorPickerUI">
+              <div class="colorPicker"></div>
+           
+           
+              <!-- <span>palette</span> -->
+              <ul id="colorList"></ul>
+           
+              <div id="activeColor">   <span>active color</span></div>
+            </div>
+        </div>
+    
 
 <script src="script.js"></script>
+<script src="draw-colors.js"></script>
 </body>
 </html>

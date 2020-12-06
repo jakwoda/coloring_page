@@ -47,3 +47,31 @@ const colorPicker = new iro.ColorPicker(".colorPicker", {
       <span class="colorHex colorActive">${ hexString.substring(1,7)}</span>
     `;
   })
+  let el2=document.querySelector(".rastabook");
+let colorClicked;
+let squares;
+
+  fetch('rasta.svg')
+    .then(r => r.text())
+    .then(text => {
+        el2.innerHTML = text;
+        let squares =document.querySelectorAll(".cls-1");
+        console.log(squares);
+      
+     let base = document.querySelector('.rastabook');
+ let selector = '.cls-1';
+
+
+base.addEventListener('click', function(event) {
+  let closest = event.target.closest(selector);
+	if (closest && base.contains(closest)) {
+      closest.classList.add('blue');
+      console.log(closest);
+      console.log(colorPicker.color);
+      closest.style.fill=colorPicker.color.rgbaString;
+     
+      
+  }
+});
+    
+}).catch(console.error.bind(console));
