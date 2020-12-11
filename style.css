@@ -14,6 +14,9 @@ html, body {
     color:black;
     font-family:'vag';
 }
+.main{
+ display: grid;   
+}
 img{
     width:100%;
 }
@@ -26,27 +29,67 @@ img{
 .menu{
 display: grid;
 width: 100%;
-padding:1em;
+padding:2em;
 grid-gap:1em;
-
-
-
 
 }
 /* menu items styling */
 .menuItem{
+    transition: ease 0.8s;
     width: 100%;
+    max-width: 600px;
     font-size: 2em;
     text-align: center;
     border: 0.2em solid black;
     border-radius:1em ;
     padding: 0.5em;
-
+    margin: auto;
 }
+.drawLink{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/crayon_1f58d-fe0f.png) 0 120, auto;
+}
+.pagesLink{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/framed-picture_1f5bc-fe0f.png) 120 60, auto;
+}
+.colorsLink{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/artist-palette_1f3a8.png) 120 60, auto;
+}
+.profileLink{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/artist_1f9d1-200d-1f3a8.png) 120 60, auto;
+}
+.chooseImageLink{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/hand-with-fingers-splayed_1f590-fe0f.png) 120 60, auto;
+ 
+}
+.chooseImageLink:active{
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/raised-fist_270a.png) 120 60, auto;
+ 
+}
+
+
+
+.menuItem:hover{
+    transition: ease 0.8s;
+    transform: translate3d(0.1em,0.1em,1em);
+border-radius: 1em;
+    -webkit-box-shadow: rgba(0,0,0,0.4) 0px 0 0.5em;
+    -moz-box-shadow: rgba(0,0,0,0.4) 0 0 0.5em;
+    box-shadow: rgba(0,0,0,0.4) 0 0 0.5em;}
 .navPen{
+    transition: ease 0.8s;
     width: 100%;
 padding: 0.5em;
+max-width: 300px;
+margin: auto;
 }
+
+
+.navPen:hover{
+
+    transform: translate3d(0.1em,0.1em,1em);
+    transform: rotate3d(0.5, 0.1, 0.5, -5deg);
+}
+
 a{
     text-decoration: none;
     color:inherit;
@@ -58,8 +101,10 @@ a{
 /* profile */
 
 .profilePicture{
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
     margin: auto;
     padding: 2em;
     display: grid;
+    cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/camera_1f4f7.png) 120 60, auto;
 }
