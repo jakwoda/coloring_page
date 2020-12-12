@@ -47,27 +47,29 @@ const colorPicker = new iro.ColorPicker(".colorPicker", {
       <span class="colorHex colorActive">${ hexString.substring(1,7)}</span>
     `;
   })
-  let el2=document.querySelector(".currentDrawing");
+  let currentDrawingName = localStorage.getItem('currentDrawingName');
+  console.log(currentDrawingName);
+  let base = document.querySelector('.currentDrawing');
 let colorClicked;
 let squares;
-
-  fetch('eyes.svg')
+let choosenDrawing =currentDrawingName + ".svg";
+  fetch(choosenDrawing)
     .then(r => r.text())
     .then(text => {
-        el2.innerHTML = text;
+        base.innerHTML = text;
         let squares =document.querySelectorAll(".cls-1");
         console.log(squares);
       
-     let base = document.querySelector('.currentDrawing');
+     base = document.querySelector('.currentDrawing');
  let selector = '.cls-1';
 
 
 base.addEventListener('click', function(event) {
   let closest = event.target.closest(selector);
 	if (closest && base.contains(closest)) {
-      closest.classList.add('blue');
-      console.log(closest);
-      console.log(colorPicker.color);
+      // closest.classList.add('blue');
+      // console.log(closest);
+      // console.log(colorPicker.color);
       closest.style.fill=colorPicker.color.rgbaString;
      
       

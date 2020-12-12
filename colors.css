@@ -47,12 +47,12 @@ cursor: grab;
     margin: auto;
     cursor:url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/crayon_1f58d-fe0f.png) 0 120, auto;
   }
-   .saveButton{
+   /* .saveButton{
      transition: ease 1s;
     width: 10%;
     margin: auto;
     cursor: wait;
-}
+} */
    .saveButton:active{
 cursor: progress;
        }
